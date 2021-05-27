@@ -1,0 +1,378 @@
+<html>
+  <style>
+    #header{
+      
+      background:#F8F8FF;
+    }
+    #Heading{
+      font-family:cursive;
+      font-style:bold;
+    }
+    #GamesBtn{
+      width:345px;
+      height:50px;
+      background:#F8F8FF;
+      text-align:center;
+      border-radius:10px;
+      border:1px solid black;
+    }
+       #SingUpBtn{
+      width:345px;
+      height:50px;
+      background:#F8F8FF;
+      text-align:center;
+      border-radius:10px;
+      border:1px solid black;
+    }
+    #Menu1{
+      width:50px;
+      border:1px solid black;
+      position:relative;
+      left:900px;
+    }
+        #Menu2{
+      width:50px;
+      border:1px solid black;
+      position:relative;
+      top:-20px;
+      left:900px;
+    }
+            #Menu3{
+      width:50px;
+      border:1px solid black;
+      position:relative;
+      top:-40px;
+      left:900px;
+    }
+  </style><div id="mainscreen" style="display:block;">
+<br><div id="header">
+    <font size="10" id="Heading">Sourabh gaming web</font>
+    <div id="Menu1"></div>
+    <div id="Menu2" onclick="dm();"></div>
+    <div id="Menu3"></div>
+  </div></br>
+  <br><center><div id="GamesBtn" onclick="h();"><font size="5" style="font-family: Georgia, serif; position:relative; top:12px;">Click here to Play Games</font></div></center></br>
+    <center><div id="SingUpBtn" onclick="SGUP();"><font size="5" style="font-family: Georgia, serif; position:relative; top:12px;">Sing Up</font></div></center>
+
+<script>
+  function h(){
+    document.getElementById("GameScreen").style.display = "block";
+    document.getElementById("mainscreen").style.display = "none";
+  }
+  function GTG(){
+    document.getElementById("GameScreen").style.display = "none";
+    document.getElementById("SS").style.display = "block";
+  }
+</script>
+
+</div>
+<style>
+  #MTBB{
+    font-family:Georgia, serif;
+    border-radius:10px;
+    background:#00ffe490;
+    animation:bordercolor 5s linear infinite;
+  }
+  @keyframes bordercolor{
+    0%{border-color:black;}
+    20%{border-color:skyblue;}
+    25%{border-color:red;}
+    50%{border-color:lightgreen;}
+  }
+</style>
+<div id="GameScreen" style="border:1px solid black; height:646px; display:none;" onclick="GTG();">
+<br> <div id="MTBB" style="width:300px; height:200px; border:5px solid black;   text-align:center; position:relative; left:20px;">
+  <font size="10" style="position:relative; top:40px;">Move the block</font>
+  </div>
+  
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="SS" style="display:none;">
+  
+  <html>
+  <style>
+    #board{
+      width:345px;
+      height:500px;
+      border:1px solid black;
+    }
+  #track{
+    width:115px;
+    height:500px;
+    border:1px solid black;
+  }
+  #track2{
+    width:115px;
+    height:500px;
+    border:1px solid black;
+    position:relative;
+    left:115px;
+    top:-502px;
+  }
+  #track3{
+    width:115px;
+    height:500px;
+    border:1px solid black;
+    position:relative;
+    left:230px;
+    top:-1004px;
+  }
+  #character{
+    width:115px;
+    height:100px;
+    background:blue;
+    position:relative;
+    left:0px;
+    top:300px;
+  }
+  #train{
+    width:115px;
+    height:100px;
+    background:#333333;
+    animation:;
+    position:relative;
+  }
+  @keyframes movetrain{
+    from{top:0px;}
+    to{top:400px;}
+  }
+  #train2{
+    width:115px;
+    height:100px;
+    background:#333333;
+    animation:;
+    position:relative;
+  }
+  @keyframes movetrain2{
+    from{top:0px;}
+    to{top:400px;}
+  }
+  #train3{
+    width:115px;
+    height:100px;
+    background:#333333;
+    animation:;
+    position:relative;
+  }
+  @keyframes movetrain3{
+    from{top:0px;}
+    to{top:400px;}
+  }
+
+  </style><script>
+    function see(){
+ var x = document.getElementById("character");
+ x.style.left = "115";
+    }
+    function check(){
+ var y = document.getElementById("character");
+ y.style.left = "230";
+    }
+    function zero(){
+ var z = document.getElementById("character");
+ z.style.left = "0";
+    }
+  </script>
+  <div id="board">
+    <div id="track" onclick="zero();">
+      <div id="train"></div>
+      <div id="point"></div>
+      <div id="character"></div>
+      </div>
+      <div id="track2" onclick="see();">
+        <div id="train2"></div>
+      </div>
+      <div id="track3" onclick="check();">
+        <div id="train3"></div>
+      </div>
+  </div><p id="Score" style="opacity:2;">Your score:0</p><script>
+    
+  </script>
+  <br><button  style="width:55px; position:relative; left:145px;"onclick="start();">START</button></br>
+  <br><button  style="width:50px; position:relative; left:145px;" onclick="stop();">STOP</button>
+  <script>
+  function start(){
+    var x = document.getElementById("train");
+  var y = document.getElementById("train2");
+  var z = document.getElementById("train3");
+  x.style.animation = "movetrain 2s linear infinite";
+  y.style.animation = "movetrain2 3s linear infinite";
+  z.style.animation = "movetrain3 4s linear infinite";
+  
+  
+  setTimeout(function(){
+   document.getElementById("Score").innerHTML = "Your score:10";
+    
+    },5000)
+    
+     var one = setTimeout(function(){
+   document.getElementById("Score").innerHTML = "Your score:20";
+    
+    },20000)
+    
+  var two = setTimeout(function(){
+   document.getElementById("Score").innerHTML = "Your score:30";
+    
+    },40000)
+    
+  var three = setTimeout(function(){
+   document.getElementById("Score").innerHTML = "Your score:40";
+    
+    },60000)
+    
+    var four = setTimeout(function(){
+   document.getElementById("Score").innerHTML = "Your score:50";
+    window.confirm("You WON the Level 1. Now play level two")
+    document.getElementById("train").style.animation = "movetrain 4s linear infinite";
+    document.getElementById("train2").style.animation = "movetrain 3s linear infinite";
+    document.getElementById("train3").style.animation = "movetrain 2s linear infinite";
+    },120000)
+    document.getElementById("Score").style.opacity = "2";
+  }
+  setTimeout(function(){
+    document.getElementById("Score").innerHTML = "Your score:60";
+    document.getElementById("train").style.animation = "movetrain 4s linear infinite";
+    document.getElementById("train2").style.animation = "movetrain 3s linear infinite";
+    document.getElementById("train3").style.animation = "movetrain 2s linear infinite";
+  },130000)
+  setTimeout(function(){
+    document.getElementById("Score").innerHTML = "Your score:70";
+    document.getElementById("train").style.animation = "movetrain 4s linear infinite";
+    document.getElementById("train2").style.animation = "movetrain 3s linear infinite";
+    document.getElementById("train3").style.animation = "movetrain 2s linear infinite";
+  },135000)
+  setTimeout(function(){
+    document.getElementById("Score").innerHTML = "Your score:80";
+    document.getElementById("train").style.animation = "movetrain 4s linear infinite";
+    document.getElementById("train2").style.animation = "movetrain 3s linear infinite";
+    document.getElementById("train3").style.animation = "movetrain 2s linear infinite";
+  },140000)
+  setTimeout(function(){
+    document.getElementById("Score").innerHTML = "Your score:90";
+    document.getElementById("train").style.animation = "movetrain 4s linear infinite";
+    document.getElementById("train2").style.animation = "movetrain 3s linear infinite";
+    document.getElementById("train3").style.animation = "movetrain 2s linear infinite";
+  },145000)
+  setTimeout(function(){
+    document.getElementById("Score").innerHTML = "Your score:100";
+    document.getElementById("train").style.animation = "movetrain 4s linear infinite";
+    document.getElementById("train2").style.animation = "movetrain 3s linear infinite";
+    document.getElementById("train3").style.animation = "movetrain 2s linear infinite";
+  },150000)
+  setTimeout(function(){
+    document.getElementById("Score").innerHTML = "Your score:110";
+    document.getElementById("train").style.animation = "movetrain 4s linear infinite";
+    document.getElementById("train2").style.animation = "movetrain 3s linear infinite";
+    document.getElementById("train3").style.animation = "movetrain 2s linear infinite";
+  },155000)
+  setTimeout(function(){
+    document.getElementById("Score").innerHTML = "Your score:120";
+    document.getElementById("train").style.animation = "movetrain 4s linear infinite";
+    document.getElementById("train2").style.animation = "movetrain2 3s linear infinite";
+    document.getElementById("train3").style.animation = "movetrain3 2s linear infinite";
+  },160000)
+  setTimeout(function(){
+    document.getElementById("Score").innerHTML = "Your score:130";
+    document.getElementById("character").style.backgroundColor = "skyblue";
+    window.confirm("You WON the match (Score:150)")
+    document.getElementById("train").style.animation = "movenon 4s linear infinite";
+    document.getElementById("train2").style.animation = "movenon 3s linear infinite";
+    document.getElementById("train3").style.animation = "movenon 2s linear infinite";
+  },180000)
+  function stop(){
+    var a = document.getElementById("train");
+  var b = document.getElementById("train2");
+  var c = document.getElementById("train3");
+  a.style.animation = "movenon 2s linear infinite";
+  b.style.animation = "movenon 3s linear infinite";
+  c.style.animation = "movenon 4s linear infinite";
+   
+ document.getElementById("Score").style.opacity = "0";
+  }
+  </script>
+  <br><b>If the Score Reaches 150 You won the MATCH</b></br>
+  <b><br>Tap on the Box where you want to go</br></b>
+  <br><b>The Score Increases for every 20 Seconds</b></br>
+  <br><b>There Are Two levels "Level-1" "Level-2"</b></br>
+  <br><b>If your score is 50 then you will go to Level-2</b></br>
+</html>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
